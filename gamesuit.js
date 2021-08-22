@@ -1,5 +1,6 @@
 // pilihan player
 var player = prompt('pilih gunting, batu, kertas');
+player = player.toLowerCase();
 if(player != 'gunting' && player != 'batu' && player != 'kertas'){
     player = undefined;
 }
