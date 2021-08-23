@@ -1,6 +1,6 @@
 # mini-project
 
 Hello everyone!
-this repo is the place for put my mini project using various programming languange
+this repo is the place for put my mini project by using all programming languange
 
-hope you can understand, ehe:)
+hope you can understand, hehe:)
