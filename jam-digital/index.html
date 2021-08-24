@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAT DOM 5 | Jam Digital</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(219, 248, 248);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        main{
+            margin: 50px auto;
+            width: 525px;
+            text-align: center;
+            background-color: rgb(50, 192, 173);
+            border-radius: 5px;
+            transform: translateY(120%);
+            background: rgba(0,0,0,0.4);
+            box-shadow: 0 0 15px;
+        }
+        #jam-digital{
+            margin-top: -10px;
+            color: rgb(45, 0, 151);
+            font-size: 100px;
+        }
+        footer{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        footer .heart{
+            color: rgb(255, 0, 140);
+        }
+        footer a{
+            text-decoration: none;
+        }
+        footer a:hover{
+            color: rgb(216, 125, 21);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2 id="jam-digital"></h2>
+    </main>
+    <footer>
+        <p>Build with <i class="heart">&hearts;</i> by <a href="https://instagram.com/hokky_ar" target="_blank">Hokky Aryasta.</a></p>
+    </footer>
+        
+
+    <script>
+        window.onload = function() {mainDigital()}; // untuk menjalankan fungsi mainDigital()
+        function set(e){ // fungsi agar tampilannya ada 0 dibelakangnya ketika h,m,s kurang dari 10
+            e = e < 10 ? '0' + e : e;
+            return e; 
+        }
+        function mainDigital(){ // fungsi utama 
+            let jamDigital = document.getElementById("jam-digital");
+            let currentDate = new Date();
+            let hour, minute, second;
+
+            hour = set(currentDate.getHours());
+            minute = set(currentDate.getMinutes());
+            second = set(currentDate.getSeconds());
+
+            jamDigital.innerHTML = hour + ':' + minute + ':' + second;
+
+            setTimeout('mainDigital()', 1000); // agar berjalan terus secara real time
+        }
+    </script>
+</body>
+</html>
